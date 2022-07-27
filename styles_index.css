@@ -1,0 +1,239 @@
+
+/*
+    Global styles
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.global-container{
+    display: grid;
+}
+
+:root{
+    --background-header: #3655b3;
+    --color-header-text: #d3deff;
+    --color-hover-text: #a6bcff;
+}
+
+/*
+    Header section
+*/
+
+header{
+    background-color: var(--background-header);
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-header > figure{
+    margin-left: 30px;
+}
+
+.container-header > figure img{
+    width: 80px;
+    margin-right: 10px;
+}
+
+.container-header > figure > a{
+    display: flex;
+    color: var(--color-header-text);
+    font-size: 20px;
+    width: max-content;
+    font-weight: bold;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    max-width: 992px;
+}
+
+.nav-bar > ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: max-content;
+}
+
+.nav-bar > ul > li{
+    margin-left: 10px;
+}
+
+.nav-bar > ul > li > a{
+    font-size: 17px;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-header-text);
+    transition: 500ms;
+}
+
+.nav-bar > ul > li > a:hover{
+    color: var(--color-hover-text);
+    text-shadow: 1px 1px 4px rgb(54, 54, 54);
+}
+
+.sub-menu{
+    background-color: var(--color-hover-text);
+    position: absolute;
+    margin-top: 5px;
+    display: none;
+}
+
+.nav-bar > ul > li:hover > a + .sub-menu{
+    display: block;
+}
+
+.sub-menu > li{
+    display: block;
+    padding: 10px;
+    transition: 500ms;
+}
+
+.sub-menu > li:hover{
+    background-color: var(--background-header);
+}
+
+.sub-menu > li:hover > a{
+    color: var(--color-header-text);
+}
+
+.sub-menu > li > a{
+    color: var(--background-header);
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 500ms;
+}
+
+.nav-toggle{
+    background: none;
+    border: none;
+    display: none;
+    font-size: 40px;
+    color: var(--color-header-text);
+}
+
+/*
+    Query section
+*/
+
+@media (max-width: 768px){
+    header{
+        background-color: var(--background-header);
+    }
+    
+    .container-header{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .container-header > figure{
+        margin-left: 0;
+    }
+    
+    .container-header > figure img{
+        width: 60px;
+        margin-right: 10px;
+    }
+    
+    .container-header > figure > a{
+        display: flex;
+        color: var(--color-header-text);
+        font-size: 14px;
+        width: max-content;
+        font-weight: bold;
+        align-items: center;
+        text-decoration: none;
+    }
+    
+    .nav-bar{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--color-hover-text);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        height: 92vh;
+        margin: 0;
+        
+    }
+    
+    .nav-bar > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        width: max-content;
+    }
+    
+    .nav-bar > ul > li{
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .nav-bar > ul > li > a{
+        font-size: 16px;
+        padding: 10px;
+        text-decoration: none;
+        color: var(--background-header);
+        transition: 500ms;
+    }
+
+    .nav-bar > ul > li > a:hover{
+        color: var(--background-header);
+        text-shadow: none
+    }
+    
+    .sub-menu{
+        background-color: var(--color-hover-text);
+        position: static;
+        display: none;
+    }
+    
+    .nav-bar > ul > li:hover > a + .sub-menu{
+        display: block;
+    }
+    
+    .sub-menu > li{
+        display: block;
+        padding: 10px;
+    }
+    
+    .sub-menu > li:hover{
+        background-color: transparent;
+    }
+    
+    .sub-menu > li:hover > a{
+        color: var(--background-header);
+    }
+    
+    .sub-menu > li > a{
+        color: var(--background-header);
+        padding: 10px;
+        text-decoration: none;
+        font-size: 17px;
+        transition: 500ms;
+    }
+    
+    .nav-toggle{
+        background: none;
+        border: none;
+        display: block;
+        font-size: 40px;
+        color: var(--color-header-text);
+    }
+}
