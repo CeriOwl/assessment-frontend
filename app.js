@@ -18,17 +18,17 @@ function generate_data(){
 
 function generate_first_10(container_first_10, data){
     for(let i = 0; i < 10; i++){
-        itemsGenerator(container_first_10, data[i])
+        itemsGenerator(container_first_10, data[i], i)
     }
 }
 
 function generate_second_10(container_second_10, data){
     for(let i = 10; i < 20; i++){
-        itemsGenerator(container_second_10, data[i])
+        itemsGenerator(container_second_10, data[i], i)
     }
 }
 
-function itemsGenerator(container_first_10, iterator){
+function itemsGenerator(container_first_10, iterator, number_iteration){
     let div_container = document.createElement("div")
     div_container.className = "container-item"
     let modelo = document.createElement("h3")
@@ -47,9 +47,12 @@ function itemsGenerator(container_first_10, iterator){
     let description = document.createElement("p")
     description.className = "description-item"
     description.innerHTML = `${iterator.description}`
-    let button = document.createElement("button")
+    let button = document.createElement("a")
     button.className = "button-item"
+    button.id = `button-item-${number_iteration}`
+    button.href = "html/individual.html"
     button.innerHTML = "Ver producto"
+
 
     container_first_10.appendChild(div_container)
     div_container.appendChild(modelo)
