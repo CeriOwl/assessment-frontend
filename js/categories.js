@@ -4,6 +4,16 @@ button.addEventListener("click", () => {
     navbar.classList.toggle("nav-bar-visible")
 })
 
+const button_searching = document.getElementById("button-search")
+button_searching.addEventListener("click", () =>{
+    const input_search = document.getElementById("input_search")
+    if(input_search.className == "input-appear"){
+        input_search.className = "input-disappear"
+    }else{
+        input_search.className = "input-appear"
+    }
+})
+
 function generate_data(){
     const route = "https://fakestoreapi.com/products?limit=20"
     const container_first_10 = document.getElementById("first-10")
@@ -62,4 +72,3 @@ function itemsGenerator(container_first_10, iterator){
 }
 
 generate_data()
-
