@@ -34,4 +34,10 @@ Descripción del desarrollo:
 La página esta desarrollada con unicamente HTML, CSS y Javascript, todas las animaciones y efectos son realizados a mano sin ninguna librería.
 Los datos son solo para la maqueta y son extraidos de una API de objetos random https://fakestoreapi.com/ y las imagenes para los usuarios de los comentarios son de esta otra API https://picsum.photos/.
 Es totalmente responsive, asi que esta preparada para celulares y computadoras.
-Este es el link para que lo puedan ver online:
+
+Explicación de la estructura:
+- Dentro de aplicacion_disenio esta el como se podria ver la aplicación móvil.
+- Dentro de screen_responsive estan los screenshots de cómo se ve la página en distintas resoluciones.
+
+Este es el link para que lo puedan ver online, esta hecho con el servicio para host de páginas de Github Pages:
+https://ceriowl.github.io/assessment-frontend.github.io/
