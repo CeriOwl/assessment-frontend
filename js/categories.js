@@ -57,8 +57,9 @@ function itemsGenerator(container_first_10, iterator){
     let description = document.createElement("p")
     description.className = "description-item"
     description.innerHTML = `${iterator.description}`
-    let button = document.createElement("button")
+    let button = document.createElement("a")
     button.className = "button-item"
+    button.href = "../html/individual.html"
     button.innerHTML = "Ver producto"
 
     container_first_10.appendChild(div_container)

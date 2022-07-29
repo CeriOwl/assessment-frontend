@@ -234,7 +234,9 @@ main h2{
     padding: 10px;
     border: 2px solid var(--color-header-text);
     border-radius: 5px;
+    text-decoration: none;
     transition: 300ms;
+    text-align: center;
 }
 
 .button-item:hover{

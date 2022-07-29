@@ -49,7 +49,6 @@ function itemsGenerator(container_first_10, iterator, number_iteration){
     description.innerHTML = `${iterator.description}`
     let button = document.createElement("a")
     button.className = "button-item"
-    button.id = `button-item-${number_iteration}`
     button.href = "html/individual.html"
     button.innerHTML = "Ver producto"
 
